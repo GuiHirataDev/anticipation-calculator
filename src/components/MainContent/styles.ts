@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const Main = styled.main`
   display: flex;
   height: 520px;
@@ -45,6 +47,19 @@ export const Main = styled.main`
     font-size: 18px;
   }
 
+  .form form .select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .form form .select select {
+    padding: 15px;
+    outline-color: #2789c3;
+    font-size: 16px;
+  }
+
   .form button {
     width: 100%;
     margin-top: 15px;
@@ -68,8 +83,33 @@ export const Main = styled.main`
     color: #2789c3;
   }
 
+  .result h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
   .result p {
     margin: 20px 0px;
+    font-size: 20px;
+  }
+
+  .result p span {
+    font-weight: 700;
+  }
+
+
+  .loading {
+    width: 50%;
+    height: 100%;
+    background-color: #efecec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: #2789c3;
+    margin: auto auto;
     font-size: 20px;
   }
 `;
