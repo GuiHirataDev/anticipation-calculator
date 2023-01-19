@@ -1,6 +1,14 @@
 import { createGlobalStyle } from "styled-components"
+import styled from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+    :root {
+        --color-primary: #2789c3;
+        --color-gray: #555555;
+        --color-white: #fff;
+        --color-white-2: #efecec;
+        --color-red: #ff0000;
+    }
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -45,3 +53,14 @@ export const GlobalStyle = createGlobalStyle`
         border-spacing: 0;
     }
 ` 
+
+export const Body = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+`

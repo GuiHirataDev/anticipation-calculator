@@ -1,16 +1,15 @@
-import React from 'react';
-import { MainContent } from './components/MainContent';
-import { Body } from './styles';
-import { GlobalStyle } from './global';
+import React from "react";
+import { Body } from "./styles/global";
+import { GlobalStyle } from "./styles/global";
+import { RoutesMain } from "./routes";
+
 
 function App() {
   return (
-    <>
-      <Body>
-        <GlobalStyle />
-        <MainContent />
-      </Body>
-    </>
+    <Body>
+      <GlobalStyle />
+      <RoutesMain />
+    </Body>
   );
 }
 

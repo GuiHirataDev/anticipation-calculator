@@ -1,16 +1,15 @@
 import styled from "styled-components";
-
-
+import { Link } from "react-router-dom";
 
 export const Main = styled.main`
   display: flex;
   height: 520px;
   width: 800px;
-  border: 1px solid #555555;
+  border: 1px solid var(--color-gray);
 
   .form {
     width: 50%;
-    background-color: #fff;
+    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +17,7 @@ export const Main = styled.main`
   }
 
   .form h1 {
-    color: #555555;
+    color: var(--color-gray);
     font-size: 28px;
   }
 
@@ -33,18 +32,21 @@ export const Main = styled.main`
   }
 
   .form form div label {
-    color: #555555;
+    color: var(--color-gray);
   }
 
   .form form div label span {
-    color: #ff0000;
+    color: var(--color-red);
   }
 
   .form form div input {
     padding: 15px;
     margin: 10px 0px;
-    outline-color: #2789c3;
+    outline-color: var(--color-primary);
     font-size: 18px;
+    ::placeholder {
+      opacity: 50%;
+    }
   }
 
   .form form .select {
@@ -56,7 +58,7 @@ export const Main = styled.main`
 
   .form form .select select {
     padding: 15px;
-    outline-color: #2789c3;
+    outline-color: var(--color-primary);
     font-size: 16px;
   }
 
@@ -64,8 +66,8 @@ export const Main = styled.main`
     width: 100%;
     margin-top: 15px;
     border: none;
-    background-color: #2789c3;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     padding: 10px;
     font-size: 17px;
     font-weight: 600;
@@ -74,13 +76,13 @@ export const Main = styled.main`
 
   .result {
     width: 50%;
-    background-color: #efecec;
+    background-color: var(--color-white-2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-style: italic;
-    color: #2789c3;
+    color: var(--color-primary);
   }
 
   .result h2 {
@@ -98,18 +100,37 @@ export const Main = styled.main`
     font-weight: 700;
   }
 
-
   .loading {
     width: 50%;
     height: 100%;
-    background-color: #efecec;
+    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-style: italic;
-    color: #2789c3;
+    color: var(--color-primary);
     margin: auto auto;
     font-size: 20px;
+  }
+`;
+
+export const SmallButton = styled(Link)`
+  background-color: (--color-white-2);
+  color: var(--color-primary);
+  border: 3px solid var(--color-primary);
+  border-radius: 10px;
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 120px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  :hover {
+    background-color: var(--color-primary);
+    color: var(--color-white-2);
   }
 `;
