@@ -1,62 +1,27 @@
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
+import { useContext } from "react";
 import { Main, SmallButton } from "./styles";
+import { MainContext } from "../../contexts/MainContext";
 
-import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-import { AiFillHome } from "react-icons/ai"
+import { AiFillHome } from "react-icons/ai";
 
 export const MainContent = () => {
-  const [value1, setValue1] = useState("");
-  const [value2, setValue2] = useState("");
-  const [value3, setValue3] = useState("");
-  const [value4, setValue4] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [days, setDays] = useState<number[]>([]);
-
-  const [response, setResponse] = useState({});
-  const values: any = [];
-
-  const { register, handleSubmit } = useForm();
-
-  const array: any = [];
-  const handleData = (data: any) => {
-    setLoading(true);
-
-    array.push(data.days1, data.days2, data.days3, data.days4);
-
-    array.map((elem: number) => {
-      setDays((previousDays) => [...previousDays, elem]);
-    });
-
-    api
-      .post("", {
-        amount: data.value,
-        installments: data.installments,
-        mdr: data.percentage,
-        days: array,
-      })
-      .then((res) => setResponse(res.data))
-      .catch((err) => console.error(err))
-      .finally(() => setLoading(false));
-  };
-
-  useEffect(() => {
-    const handleValues = () => {
-      for (const [key, value] of Object.entries(response)) {
-        values.push(value);
-      }
-      setValue1(values[0]);
-      setValue2(values[1]);
-      setValue3(values[2]);
-      setValue4(values[3]);
-    };
-    handleValues();
-  }, [response]);
+  const {
+    value1,
+    value2,
+    value3,
+    value4,
+    loading,
+    days,
+    register,
+    handleSubmit,
+    handleData,
+  } = useContext(MainContext);
 
   return (
     <Main>
-      <SmallButton to={"/"} className="backButton"><AiFillHome /></SmallButton>
+      <SmallButton to={"/"} className="backButton">
+        <AiFillHome />
+      </SmallButton>
       <section className="form">
         <h1>Simule sua Antecipação</h1>
         <form onSubmit={handleSubmit(handleData)}>
@@ -99,7 +64,9 @@ export const MainContent = () => {
             </label>
             <div className="select">
               <select {...register("days1")}>
-                <option value="1" selected>1</option>
+                <option value="1" selected>
+                  1
+                </option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -130,7 +97,9 @@ export const MainContent = () => {
                 <option value="29">29</option>
               </select>
               <select {...register("days2")}>
-                <option value="30" selected>30</option>
+                <option value="30" selected>
+                  30
+                </option>
                 <option value="31">31</option>
                 <option value="32">32</option>
                 <option value="33">33</option>
@@ -162,7 +131,9 @@ export const MainContent = () => {
                 <option value="59">59</option>
               </select>
               <select {...register("days3")}>
-                <option value="60" selected>60</option>
+                <option value="60" selected>
+                  60
+                </option>
                 <option value="61">61</option>
                 <option value="62">62</option>
                 <option value="63">63</option>
@@ -194,7 +165,9 @@ export const MainContent = () => {
                 <option value="87">87</option>
                 <option value="88">88</option>
                 <option value="89">89</option>
-                <option value="90" selected>90</option>
+                <option value="90" selected>
+                  90
+                </option>
               </select>
             </div>
           </div>
