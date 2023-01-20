@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Main, SmallButton } from "./styles";
+import { Main, SmallButton, HistoryButton } from "./styles";
 import { MainContext } from "../../contexts/MainContext";
 
 import { AiFillHome } from "react-icons/ai";
@@ -22,6 +22,7 @@ export const MainContent = () => {
       <SmallButton to={"/"} className="backButton">
         <AiFillHome />
       </SmallButton>
+      <HistoryButton to={"/history"}>Ver histórico de simulações</HistoryButton>
       <section className="form">
         <h1>Simule sua Antecipação</h1>
         <form onSubmit={handleSubmit(handleData)}>

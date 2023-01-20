@@ -139,3 +139,25 @@ export const SmallButton = styled(Link)`
     color: var(--color-white-2);
   }
 `;
+
+export const HistoryButton = styled(Link)`
+  background-color: (--color-white-2);
+  color: var(--color-primary);
+  border: 3px solid var(--color-primary);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  top: 120px;
+  right: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 5px;
+  font-weight: 500;
+
+  :hover {
+    background-color: var(--color-primary);
+    color: var(--color-white-2);
+  }
+`
