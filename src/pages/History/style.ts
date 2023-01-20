@@ -16,6 +16,7 @@ export const MainHistory = styled.main`
     h1 {
         font-size: 30px;
         font-weight: 700;
+        
         margin: 20px;
     }
 `

@@ -13,6 +13,7 @@ export const MainHome = styled.main`
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
         color: var(--color-primary);
+
         width: 300px;
     }
 
@@ -26,6 +27,7 @@ export const MainHome = styled.main`
         text-decoration: none;
         background-color: var(--color-primary);
         color: var(--color-white);
+        
         font-weight: 600;
         padding: 15px 100px;
         margin-top: 20px;

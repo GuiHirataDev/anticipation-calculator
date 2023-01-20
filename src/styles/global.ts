@@ -60,6 +60,7 @@ export const Body = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

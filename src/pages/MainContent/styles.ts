@@ -5,19 +5,22 @@ export const Main = styled.main`
   display: flex;
   height: 520px;
   width: 800px;
+
   border: 1px solid var(--color-gray);
 
   .form {
     width: 50%;
-    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+
+    background-color: var(--color-white);
   }
 
   .form h1 {
     color: var(--color-gray);
+
     font-size: 28px;
   }
 
@@ -42,8 +45,11 @@ export const Main = styled.main`
   .form form div input {
     padding: 15px;
     margin: 10px 0px;
+
     outline-color: var(--color-primary);
+
     font-size: 18px;
+    
     ::placeholder {
       opacity: 50%;
     }
@@ -63,17 +69,21 @@ export const Main = styled.main`
 
   .form form .select select {
     padding: 15px;
+
     outline-color: var(--color-primary);
+
     font-size: 16px;
   }
 
   .form button {
     width: 100%;
     margin-top: 15px;
+    padding: 10px;
+
     border: none;
     background-color: var(--color-primary);
+
     color: var(--color-white);
-    padding: 10px;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
@@ -81,23 +91,27 @@ export const Main = styled.main`
 
   .result {
     width: 50%;
-    background-color: var(--color-white-2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-style: italic;
+
+    background-color: var(--color-white-2);
+    
     color: var(--color-primary);
+    font-style: italic;
   }
 
   .result h2 {
-    font-size: 22px;
     margin-bottom: 5px;
+
+    font-size: 22px;
     font-weight: 700;
   }
 
   .result p {
     margin: 20px 0px;
+
     font-size: 20px;
   }
 
@@ -108,31 +122,35 @@ export const Main = styled.main`
   .loading {
     width: 50%;
     height: 100%;
-    background-color: var(--color-white-2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-style: italic;
-    color: var(--color-primary);
     margin: auto auto;
+
+    background-color: var(--color-white-2);
+
+    font-style: italic;
     font-size: 20px;
+    color: var(--color-primary);
   }
 `;
 
 export const SmallButton = styled(Link)`
-  background-color: (--color-white-2);
-  color: var(--color-primary);
-  border: 3px solid var(--color-primary);
-  border-radius: 10px;
-  height: 45px;
   width: 45px;
+  height: 45px;
   position: absolute;
   top: 120px;
-  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: (--color-white-2);
+  border: 3px solid var(--color-primary);
+  border-radius: 10px;
+
+  color: var(--color-primary);
+  text-decoration: none;
 
   :hover {
     background-color: var(--color-primary);
@@ -141,10 +159,6 @@ export const SmallButton = styled(Link)`
 `;
 
 export const HistoryButton = styled(Link)`
-  background-color: (--color-white-2);
-  color: var(--color-primary);
-  border: 3px solid var(--color-primary);
-  border-radius: 10px;
   height: 40px;
   position: absolute;
   top: 120px;
@@ -152,8 +166,14 @@ export const HistoryButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   padding: 5px;
+
+  background-color: (--color-white-2);
+  border: 3px solid var(--color-primary);
+  border-radius: 10px;
+  
+  color: var(--color-primary);
+  text-decoration: none;
   font-weight: 500;
 
   :hover {
