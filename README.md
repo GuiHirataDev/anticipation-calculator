@@ -25,6 +25,7 @@
 <p align="justify">Uma calculadora para que, através de uma simulação, nossos clientes consigam saber quais valores receberão caso optem por antecipar o recebimento</p>
 
 ## Deploy da aplicação
+https://anticipation-calculator-opal.vercel.app/
 
 ## Dependências e Libs Instaladas
   - React
@@ -43,6 +44,7 @@
   5. Use o comando "yarn start" para abrir a aplicação em seu navegador
 
 ## Como rodar os testes
+ * Em desenvolvimento *
 
 ## Problemas em aberto
  - Bug na hora de tentar uma nova simulação apenas trocando os dias da antecipação
@@ -53,3 +55,4 @@
  - Máscara de valor monetário no Input
  - Modo escuro da aplicação
  - Histórico de simulações
+ - Testes de integração
