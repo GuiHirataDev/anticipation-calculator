@@ -58,5 +58,5 @@ https://anticipation-calculator-opal.vercel.app/
  - Testes de integração
 
 # Contato
-Guilherme K Hirata - <a href="https://www.linkedin.com/in/guilhermekhirata/">Linkedin</a>
+Guilherme K Hirata - <a href="https://www.linkedin.com/in/guilhermekhirata/">Linkedin</a> <br>
 Email - guilhermekhirata@hotmail.com
