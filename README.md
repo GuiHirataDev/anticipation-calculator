@@ -56,3 +56,7 @@ https://anticipation-calculator-opal.vercel.app/
  - Modo escuro da aplicação
  - Histórico de simulações
  - Testes de integração
+
+# Contato
+Guilherme K Hirata - <a href="https://www.linkedin.com/in/guilhermekhirata/">Linkedin</a>
+Email - guilhermekhirata@hotmail.com
