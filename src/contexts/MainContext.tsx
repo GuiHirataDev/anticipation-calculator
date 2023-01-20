@@ -3,6 +3,7 @@ import { api } from "../services/api";
 
 
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify"
 
 interface ICalculatorValues {
   value: number;
@@ -30,6 +31,13 @@ interface IMainContext {
   handleData(data: ICalculatorValues): void;
 }
 
+interface AxiosData {
+  amount: number,
+  installments: number,
+  mdr: number,
+  days: number[],
+}
+
 export const MainContext = createContext<IMainContext>({} as IMainContext);
 
 export const MainProvider = ({ children }: IMainProvider) => {
@@ -46,6 +54,19 @@ export const MainProvider = ({ children }: IMainProvider) => {
   const values: any[] = [];
   const daysList: any = [];
 
+  const toastErrorData = () => {
+    toast.error("Não foi possível realizar a simulação, por favor verifique os dados e tente novamente.")
+  }
+  const toastErrorInternal = () => {
+    toast.error("Ocorreu um erro inesperado, tente novamente mais tarde.")
+  }
+  const toastErrorTimeout = () => {
+    toast.error("Não foi possível estabelecer uma conexão com o servidor, tente novamente mais tarde.")
+  }
+  const toastErrorTimeoutUser = () => {
+    toast.error("Sua conexão parece estar lenta, não foi possível realizar a simulação.")
+  }
+
   const handleData = (data: ICalculatorValues) => {
     setLoading(true);
 
@@ -56,14 +77,24 @@ export const MainProvider = ({ children }: IMainProvider) => {
     });
 
     api
-      .post("", {
+      .post<AxiosData>("", {
         amount: data.value,
         installments: data.installments,
         mdr: data.percentage,
         days: daysList,
       })
       .then((res) => setResponse(res.data))
-      .catch((err) => console.error(err))
+      .catch((err) => {
+        if(err.message === "Request failed with status code 400"){
+          toastErrorData()
+        } else if(err.message === "Request failed with status code 500"){
+          toastErrorInternal()
+        } else if (err.message === "Request failed with status code 408"){
+          toastErrorTimeout()
+        } else if (err.message === "timeout of 5000ms exceeded"){
+          toastErrorTimeoutUser()
+        }
+      })
       .finally(() => setLoading(false));
   };
 

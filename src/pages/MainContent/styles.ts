@@ -108,7 +108,7 @@ export const Main = styled.main`
   .loading {
     width: 50%;
     height: 100%;
-    background-color: var(--color-white);
+    background-color: var(--color-white-2);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -3,6 +3,8 @@ import { Main, SmallButton, HistoryButton } from "./styles";
 import { MainContext } from "../../contexts/MainContext";
 
 import { AiFillHome } from "react-icons/ai";
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export const MainContent = () => {
   const {
@@ -39,7 +41,7 @@ export const MainContent = () => {
           </div>
           <div>
             <label htmlFor="input2">
-              Em quantas parcelas <span>*</span>
+              Em quantas parcelas (máx: 12) <span>*</span>
             </label>
             <input
               type="number"
@@ -50,7 +52,7 @@ export const MainContent = () => {
           </div>
           <div>
             <label htmlFor="input3">
-              Informe o percentual de MDR <span>*</span>
+              Informe o percentual de MDR (máx: 100)<span>*</span>
             </label>
             <input
               type="number"
@@ -202,6 +204,7 @@ export const MainContent = () => {
           </p>
         </section>
       )}
+      <ToastContainer />
     </Main>
   );
 };
