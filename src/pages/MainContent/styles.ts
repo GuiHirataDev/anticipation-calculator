@@ -49,6 +49,11 @@ export const Main = styled.main`
     }
   }
 
+  input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+
   .form form .select {
     display: flex;
     flex-direction: row;

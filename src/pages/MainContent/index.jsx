@@ -30,7 +30,7 @@ export const MainContent = () => {
               Informe o valor da venda <span>*</span>
             </label>
             <input
-              type="text"
+              type="number"
               id="input1"
               placeholder="Ex: 1000"
               {...register("value")}
@@ -41,7 +41,7 @@ export const MainContent = () => {
               Em quantas parcelas <span>*</span>
             </label>
             <input
-              type="text"
+              type="number"
               id="input2"
               placeholder="Ex: 10"
               {...register("installments")}
@@ -52,7 +52,7 @@ export const MainContent = () => {
               Informe o percentual de MDR <span>*</span>
             </label>
             <input
-              type="text"
+              type="number"
               id="input3"
               placeholder="Ex: 15"
               {...register("percentage")}
